@@ -6,7 +6,11 @@ package com.mycompany.medifinder;
 
 
 public class RepresentanteFarmacia {
-
+    private String docld;
+    private String nombres;
+    private String apellidos;
+    private String email;
+    private String telefono;
     public String getDocld() {
         return docld;
     }
@@ -46,9 +50,5 @@ public class RepresentanteFarmacia {
     public void setTelefono(String telefono) {
         this.telefono = telefono;
     }
-    private String docld;
-    private String nombres;
-    private String apellidos;
-    private String email;
-    private String telefono;
+ 
 }

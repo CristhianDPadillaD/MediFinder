@@ -6,7 +6,9 @@ package com.mycompany.medifinder;
 
 
 public class DocumentoSoporte {
-
+    private String nombreArchivo;
+    private String tipo;
+    private String url;
     public String getNombreArchivo() {
         return nombreArchivo;
     }
@@ -30,8 +32,6 @@ public class DocumentoSoporte {
     public void setUrl(String url) {
         this.url = url;
     }
-    private String nombreArchivo;
-    private String tipo;
-    private String url;
+   
     
 }

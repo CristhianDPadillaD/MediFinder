@@ -6,7 +6,9 @@ package com.mycompany.medifinder;
 
 
 public class Municipio {
-
+  private String id;
+   private String nombre;
+   
     public String getId() {
         return id;
     }
@@ -22,6 +24,5 @@ public class Municipio {
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
-    private String id;
-    private String nombre;
+  
 }

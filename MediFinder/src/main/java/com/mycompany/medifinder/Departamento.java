@@ -6,7 +6,8 @@ package com.mycompany.medifinder;
 
 
 public class Departamento {
-
+    private int id;
+    private String nombre;
     public int getId() {
         return id;
     }
@@ -22,7 +23,6 @@ public class Departamento {
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
-    private int id;
-    private String nombre;
+    
     
 }

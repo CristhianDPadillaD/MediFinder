@@ -7,7 +7,9 @@ import com.mycompany.medifinder.enums.EstadoFarmacia;
 import java.util.Date;
 
 public class SolicitudAfiliacion {
-
+    private Date fecha;
+    private EstadoFarmacia estado;
+    private String comentario;
     public Date getFecha() {
         return fecha;
     }
@@ -31,7 +33,5 @@ public class SolicitudAfiliacion {
     public void setComentario(String comentario) {
         this.comentario = comentario;
     }
-    private Date fecha;
-    private EstadoFarmacia estado;
-    private String comentario;
+
 }

@@ -9,6 +9,13 @@ public class DocumentoSoporte {
     private String nombreArchivo;
     private String tipo;
     private String url;
+
+    public DocumentoSoporte(String nombreArchivo, String tipo, String url) {
+        this.nombreArchivo = nombreArchivo;
+        this.tipo = tipo;
+        this.url = url;
+    }
+    
     public String getNombreArchivo() {
         return nombreArchivo;
     }

@@ -4,10 +4,22 @@
  */
 package com.mycompany.medifinder;
 
+import java.util.ArrayList;
+import java.util.List;
+
 
 public class Departamento {
     private int id;
     private String nombre;
+    private List<Municipio> municipios;
+
+
+public Departamento(int id, String nombre) {
+        this.id = id;
+        this.nombre = nombre;
+        this.municipios = new ArrayList<>();
+    }
+    
     public int getId() {
         return id;
     }
@@ -24,5 +36,12 @@ public class Departamento {
         this.nombre = nombre;
     }
     
+    public List<Municipio> getMunicipios() {
+        return municipios;
+    }
+
+    public void setMunicipios(List<Municipio> municipios) {
+        this.municipios = municipios;
+    }
     
 }

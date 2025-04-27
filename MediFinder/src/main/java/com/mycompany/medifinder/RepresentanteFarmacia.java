@@ -11,6 +11,15 @@ public class RepresentanteFarmacia {
     private String apellidos;
     private String email;
     private String telefono;
+
+    public RepresentanteFarmacia(String docld, String nombres, String apellidos, String email, String telefono) {
+        this.docld = docld;
+        this.nombres = nombres;
+        this.apellidos = apellidos;
+        this.email = email;
+        this.telefono = telefono;
+    }
+    
     public String getDocld() {
         return docld;
     }

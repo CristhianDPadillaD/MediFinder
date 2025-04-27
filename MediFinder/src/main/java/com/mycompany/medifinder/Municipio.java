@@ -8,6 +8,11 @@ package com.mycompany.medifinder;
 public class Municipio {
   private String id;
    private String nombre;
+
+    public Municipio(String id, String nombre) {
+        this.id = id;
+        this.nombre = nombre;
+    }
    
     public String getId() {
         return id;

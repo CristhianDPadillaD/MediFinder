@@ -11,14 +11,12 @@ public class Farmacia {
     private String direccion;
     private String email;
     private EstadoFarmacia Estado;
-    private SolicitudAfiliacion solicitud;
 
-    public Farmacia(String nombre, String nit, String direccion, String email, SolicitudAfiliacion solicitud) {
+    public Farmacia(String nombre, String nit, String direccion, String email) {
         this.nombre = nombre;
         this.nit = nit;
         this.direccion = direccion;
         this.email = email;
-        this.solicitud = solicitud;
     }
 
     public String getNombre() {
@@ -60,13 +58,5 @@ public class Farmacia {
     public void setEstado(EstadoFarmacia Estado) {
         this.Estado = Estado;
     }
-    
-    public SolicitudAfiliacion getSolicitud() {
-        return solicitud;
-    }
-
-    public void setSolicitud(SolicitudAfiliacion solicitud) {
-        this.solicitud = solicitud;
-    }
-    
+       
 }

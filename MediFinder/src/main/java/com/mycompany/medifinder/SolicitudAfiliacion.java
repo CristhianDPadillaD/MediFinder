@@ -10,17 +10,15 @@ public class SolicitudAfiliacion {
     private EstadoSolicitud estado; 
     private String comentario;
     private Municipio municipio; 
-    private Farmacia farmacia;
     private RepresentanteFarmacia representante;
     private List<DocumentoSoporte> documentos; 
 
 
-    public SolicitudAfiliacion(Date fecha, EstadoSolicitud estado, String comentario, Municipio municipio, Farmacia farmacia, RepresentanteFarmacia representante) {
+    public SolicitudAfiliacion(Date fecha, EstadoSolicitud estado, String comentario, Municipio municipio, RepresentanteFarmacia representante) {
         this.fecha = fecha;
         this.estado = estado;
         this.comentario = comentario;
         this.municipio = municipio;
-        this.farmacia = farmacia;
         this.representante = representante;
         this.documentos = new ArrayList<>(); 
     }
@@ -43,14 +41,6 @@ public class SolicitudAfiliacion {
 
     public void setMunicipio(Municipio municipio) {
         this.municipio = municipio;
-    }
-
-    public Farmacia getFarmacia() {
-        return farmacia;
-    }
-
-    public void setFarmacia(Farmacia farmacia) {
-        this.farmacia = farmacia;
     }
 
     public RepresentanteFarmacia getRepresentante() {

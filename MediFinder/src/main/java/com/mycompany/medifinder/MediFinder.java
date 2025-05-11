@@ -4,29 +4,19 @@ import java.util.List;
 import java.util.ArrayList;
 
 public class MediFinder {
-    private String id; 
-    private Departamento departamento; 
+    private List <Departamento> departamento; 
     private List<Farmacia> farmacias; 
 
-    public MediFinder(String id) {
-        this.id = id;
+    public MediFinder() {
         this.farmacias = new ArrayList<>();
-        this.departamento = null; 
+        this.departamento = new ArrayList<>(); 
     }
 
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
-
-    public Departamento getDepartamento() {
+    public List<Departamento> getDepartamento() {
         return departamento;
     }
 
-    public void setDepartamento(Departamento departamento) {
+    public void setDepartamento(List <Departamento> departamento) {
         this.departamento = departamento;
     }
 

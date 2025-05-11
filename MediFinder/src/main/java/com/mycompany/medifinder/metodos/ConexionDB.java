@@ -7,9 +7,9 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class ConexionDB {
-     String URL = "jdbc:mysql://localhost:3306/PQRS";
+     String URL = "jdbc:mysql://localhost:3306/Medifinder";
     String USUARIO = "root";
-    String CONTRASEÑA = "admin123";
+    String CONTRASEÑA = "admin";
     String driver = "com.mysql.cj.jdbc.Driver";
     java.sql.Connection cx; // Objeto Conexion para la conexión a la base de datos
     

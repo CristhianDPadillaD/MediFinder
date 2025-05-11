@@ -12,7 +12,7 @@ CREATE TABLE Farmacia (
 CREATE TABLE RepresentanteFarmacia (
     idRepresentante INT PRIMARY KEY AUTO_INCREMENT,
     nombre VARCHAR(100) NOT NULL,
-    cedula VARCHAR(20) UNIQUE,
+    apellido varchar(100) NOT NULL,
     telefono VARCHAR(20),
     correo VARCHAR(100)
 );
@@ -27,24 +27,30 @@ CREATE TABLE Municipio (
     idDepartamento INT,
     FOREIGN KEY (idDepartamento) REFERENCES Departamento(idDepartamento)
 );
-CREATE TABLE SolicitudAfiliacion (
-    idSolicitud INT PRIMARY KEY AUTO_INCREMENT,
-    fecha DATETIME NOT NULL,
-    estado ENUM('ACTIVO', 'INACTIVO') NOT NULL,
-    comentario VARCHAR(200),
-    idMunicipio INT,
-    idFarmacia INT,
-    idRepresentante INT,
-    FOREIGN KEY (idMunicipio) REFERENCES Municipio(idMunicipio),
-    FOREIGN KEY (idFarmacia) REFERENCES Farmacia(idFarmacia),
-    FOREIGN KEY (idRepresentante) REFERENCES RepresentanteFarmacia(idRepresentante)
-);
-CREATE TABLE DocumentoSoporte (
+CREATE TABLE Documento (
     idDocumento INT PRIMARY KEY AUTO_INCREMENT,
     idSolicitud INT,
     nombreDocumento VARCHAR(100),
     tipoDocumento VARCHAR(50),
-    rutaArchivo VARCHAR(200),
-    FOREIGN KEY (idSolicitud) REFERENCES SolicitudAfiliacion(idSolicitud)
+    rutaArchivo VARCHAR(200)
 );
+CREATE TABLE SolicitudAfiliacion (
+    idSolicitud INT PRIMARY KEY AUTO_INCREMENT,
+    fecha DATETIME NOT NULL,
+    estado ENUM('PENDIENTE','APROBADA', 'RECHAZADA') NOT NULL,
+    comentario VARCHAR(200),
+    idMunicipio INT,
+    idRepresentante INT,
+    idDocumento INT,
+    FOREIGN KEY (idMunicipio) REFERENCES Municipio(idMunicipio),
+    FOREIGN KEY (idRepresentante) REFERENCES RepresentanteFarmacia(idRepresentante),
+    FOREIGN KEY (idDocumento) REFERENCES Documento(idDocumento)
+);
+
+INSERT INTO Departamento (nombre) VALUES ('Nariño');
+INSERT INTO Municipio (nombre, idDepartamento)
+VALUES ('Pasto', (SELECT idDepartamento FROM Departamento WHERE nombre = 'Nariño'));
+INSERT INTO RepresentanteFarmacia (nombre, apellido, telefono, correo ) VALUES ('Luisa', 'Portilla', '3138196821','Luisa123@gmail.com');
+
+
 

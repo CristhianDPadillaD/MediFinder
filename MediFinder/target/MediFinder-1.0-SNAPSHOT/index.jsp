@@ -12,6 +12,9 @@
         <title>JSP Page</title>
     </head>
     <body>
+        <form action="SvAgregarSolicitud" method="post">
+            <input type="submit" value="Enviar" />
+        </form>
         <h1>Hello World!</h1>
     </body>
 </html>

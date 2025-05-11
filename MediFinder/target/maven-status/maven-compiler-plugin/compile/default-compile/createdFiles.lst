@@ -1,2 +1,15 @@
-com\mycompany\medifinder\resources\JakartaEE8Resource.class
 com\mycompany\medifinder\JakartaRestConfiguration.class
+servlets\SvAgregarSolicitud.class
+com\mycompany\medifinder\metodos\ConexionDB.class
+com\mycompany\medifinder\Municipio.class
+com\mycompany\medifinder\tests\MediFinderTest.class
+com\mycompany\medifinder\SolicitudAfiliacion.class
+com\mycompany\medifinder\metodos\GuardarSolicitud.class
+com\mycompany\medifinder\RepresentanteFarmacia.class
+com\mycompany\medifinder\DocumentoSoporte.class
+com\mycompany\medifinder\Farmacia.class
+com\mycompany\medifinder\Departamento.class
+com\mycompany\medifinder\enums\EstadoSolicitud.class
+com\mycompany\medifinder\resources\JakartaEE8Resource.class
+com\mycompany\medifinder\MediFinder.class
+com\mycompany\medifinder\enums\EstadoFarmacia.class

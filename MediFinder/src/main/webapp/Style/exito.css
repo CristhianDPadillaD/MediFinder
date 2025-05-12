@@ -1,0 +1,299 @@
+:root {
+    --primary-color: #3498db;
+    --primary-dark: #2980b9;
+    --secondary-color: #ff6b81;
+    --secondary-dark: #ff4757;
+    --success-color: #2ecc71;
+    --success-dark: #27ae60;
+    --bg-color: #f0f8ff;
+    --bubble-color: #2c3e50;
+    --text-color: #333;
+    --text-light: #777;
+    --white: #ffffff;
+    --shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    --shadow-hover: 0 8px 20px rgba(0, 0, 0, 0.15);
+    --border-radius: 12px;
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.exito-body {
+    background-color: var(--bg-color);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    overflow-x: hidden;
+    position: relative;
+    color: var(--text-color);
+}
+
+.bubble-background {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.bubble {
+    position: absolute;
+    background-color: var(--bubble-color);
+    opacity: 0.1;
+    border-radius: 50%;
+    animation: float 20s infinite ease-in-out;
+}
+
+.bubble:nth-child(1) {
+    width: 100px;
+    height: 100px;
+    top: 10%;
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.bubble:nth-child(2) {
+    width: 150px;
+    height: 150px;
+    top: 20%;
+    right: 10%;
+    animation-delay: 2s;
+}
+
+.bubble:nth-child(3) {
+    width: 80px;
+    height: 80px;
+    bottom: 30%;
+    left: 20%;
+    animation-delay: 4s;
+}
+
+.bubble:nth-child(4) {
+    width: 120px;
+    height: 120px;
+    bottom: 20%;
+    right: 15%;
+    animation-delay: 6s;
+}
+
+.bubble:nth-child(5) {
+    width: 60px;
+    height: 60px;
+    top: 50%;
+    left: 50%;
+    animation-delay: 8s;
+}
+
+.bubble:nth-child(6) {
+    width: 90px;
+    height: 90px;
+    bottom: 10%;
+    left: 40%;
+    animation-delay: 10s;
+}
+
+.bubble:nth-child(7) {
+    width: 70px;
+    height: 70px;
+    top: 30%;
+    left: 30%;
+    animation-delay: 12s;
+}
+
+@keyframes float {
+    0% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-40px) rotate(180deg); }
+    100% { transform: translateY(0) rotate(360deg); }
+}
+
+.exito-container {
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: var(--border-radius);
+    padding: 40px;
+    width: 100%;
+    max-width: 600px;
+    box-shadow: var(--shadow);
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    margin: 20px 0;
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+.header-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.logo-exito {
+    width: 120px;
+    height: auto;
+    margin-bottom: 20px;
+    animation: pulseLogo 3s infinite ease-in-out;
+}
+
+.success-icon {
+    font-size: 60px;
+    color: var(--success-color);
+    margin: 15px 0;
+    animation: fadeInDown 1s ease-out, pulse 2s infinite ease-in-out;
+}
+
+@keyframes pulseLogo {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+.titulo-container {
+    margin-bottom: 10px;
+}
+
+.titulo-exito {
+    color: var(--success-color);
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+    background: linear-gradient(45deg, var(--success-color), var(--success-dark));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.subtitulo-exito {
+    color: var(--text-light);
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.mensaje-exito {
+    background-color: rgba(46, 204, 113, 0.1);
+    border-left: 4px solid var(--success-color);
+    padding: 15px 20px;
+    margin: 20px 0;
+    border-radius: 5px;
+    text-align: left;
+}
+
+.mensaje-exito p {
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.pulse {
+    animation: heartbeat 1.5s infinite;
+}
+
+@keyframes heartbeat {
+    0% { transform: scale(1); }
+    25% { transform: scale(1.1); }
+    50% { transform: scale(1); }
+    75% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+.botones-exito {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0 10px;
+}
+
+.botones-exito button {
+    padding: 14px 28px;
+    border: none;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: var(--shadow);
+}
+
+.btn-inicio {
+    background: linear-gradient(45deg, var(--primary-color), var(--primary-dark));
+    color: white;
+}
+
+.btn-inicio:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-hover);
+}
+
+.footer {
+    margin-top: auto;
+    padding: 20px;
+    text-align: center;
+    color: var(--text-light);
+    font-size: 0.9rem;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Confetti animation */
+.confetti {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    opacity: 0.7;
+    border-radius: 0;
+    animation: confettiFall 5s ease-in-out infinite;
+}
+
+@keyframes confettiFall {
+    0% { transform: translateY(-100vh) rotate(0deg); }
+    100% { transform: translateY(100vh) rotate(360deg); }
+}
+
+@media (max-width: 768px) {
+    .exito-container {
+        padding: 30px 20px;
+    }
+    
+    .titulo-exito {
+        font-size: 1.8rem;
+    }
+    
+    .subtitulo-exito {
+        font-size: 1rem;
+    }
+    
+    .botones-exito {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .botones-exito button {
+        width: 100%;
+        justify-content: center;
+    }
+}

@@ -26,24 +26,27 @@
                 <i class="fa-solid fa-circle-check"></i>
             </div>
             <div class="titulo-container">
-                <h1 class="titulo-exito">¡Tu registro ha sido exitoso!</h1>
-                <p class="subtitulo-exito">Bienvenido a MediFinder <i class="fa-solid fa-heart pulse" style="color: #ff6b81;"></i></p>
+                <h1 class="titulo-exito">Tu registro en MediFinder ah sido un exito!!</h1>
+                <p class="subtitulo-exito">Bienvenido<i class="fa-solid fa-heart pulse" style="color: #ff6b81;"></i></p>
             </div>
         </div>
         
         <div class="mensaje-exito">
-            <p>Hemos recibido tu información correctamente. Pronto nos pondremos en contacto contigo para completar el proceso de afiliación.</p>
+
+            <p>Hemos recibido tu información correctamente </p>
+            <p>Ahora puedes disfrutar de todos los beneficios que MediFinder tiene para ti!</p>
+       
         </div>
         
         <div class="botones-exito">
             <button class="btn-inicio" onclick="window.location.href='index.html'">
-                <i class="fa-solid fa-home"></i> VOLVER AL INICIO
+                <i class="fa-solid fa-home"></i> Volver al inicio
             </button>
         </div>
     </div>
 
     <footer class="footer">
-        <p>&copy; Ingenieria de Software - MediFinder - Transformando el acceso a la salud</p>
+        <p>&copy; Ingenieria de Software - MediFinder - Sofía Burbano - Cristhian Padilla - Juan Calpa </p>
     </footer>
     
 </body>

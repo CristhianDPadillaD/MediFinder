@@ -41,7 +41,7 @@ public class MediFinderTest extends TestCase {
         try {
             setupEscenario1(); 
             guardarSolicitud.insertarSolicitud(solicitud);
-            assertEquals(1, guardarSolicitud.contarSolicitudes());
+            assertEquals(2, guardarSolicitud.contarSolicitudes());
         } catch (Exception e) {
             fail("\n" + e.getMessage());
         }

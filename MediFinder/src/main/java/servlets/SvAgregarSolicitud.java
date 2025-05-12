@@ -154,7 +154,7 @@ public class SvAgregarSolicitud extends HttpServlet {
         SolicitudAfiliacion solicitud = new SolicitudAfiliacion(fechaSolicitud, EstadoSolicitud.PENDIENTE, comentario, municipio, representante, documentos, nombre, nit, direccion, email);
         metodosGuardarSolicitud.insertarSolicitud(solicitud);
         test.testGuardarSolicitud();
-        response.sendRedirect("Formulario.jsp");
+        response.sendRedirect("bienvenida.jsp");
     }
 
     @Override

@@ -51,11 +51,11 @@ public class Farmacia {
         this.email = email;
     }
 
-    public EstadoFarmacia getEstado() {
+    public EstadoFarmacia getEstadoFarmacia() {
         return Estado;
     }
 
-    public void setEstado(EstadoFarmacia Estado) {
+    public void setEstadoFarmacia(EstadoFarmacia Estado) {
         this.Estado = Estado;
     }
        

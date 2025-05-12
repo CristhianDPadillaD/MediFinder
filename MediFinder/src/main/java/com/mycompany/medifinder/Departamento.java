@@ -9,22 +9,22 @@ import java.util.List;
 
 
 public class Departamento {
-    private int id;
+    private String id;
     private String nombre;
     private List<Municipio> municipios;
 
 
-public Departamento(int id, String nombre) {
+public Departamento(String id, String nombre) {
         this.id = id;
         this.nombre = nombre;
         this.municipios = new ArrayList<>();
     }
     
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 

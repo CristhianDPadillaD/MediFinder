@@ -5,7 +5,7 @@ import java.util.Date;
 import java.util.List;
 import java.util.ArrayList;
 
-public class SolicitudAfiliacion {
+public class SolicitudAfiliacion extends Farmacia{
     private Date fecha;
     private EstadoSolicitud estado; 
     private String comentario;
@@ -13,15 +13,16 @@ public class SolicitudAfiliacion {
     private RepresentanteFarmacia representante;
     private List<DocumentoSoporte> documentos; 
 
-
-    public SolicitudAfiliacion(Date fecha, EstadoSolicitud estado, String comentario, Municipio municipio, RepresentanteFarmacia representante) {
+    public SolicitudAfiliacion(Date fecha, EstadoSolicitud estado, String comentario, Municipio municipio, RepresentanteFarmacia representante, List<DocumentoSoporte> documentos, String nombre, String nit, String direccion, String email) {
+        super(nombre, nit, direccion, email);
         this.fecha = fecha;
         this.estado = estado;
         this.comentario = comentario;
         this.municipio = municipio;
         this.representante = representante;
-        this.documentos = new ArrayList<>(); 
+        this.documentos = documentos;
     }
+
 
     public void agregarDocumentoSoporte(DocumentoSoporte documento) {
         this.documentos.add(documento);
@@ -59,13 +60,14 @@ public class SolicitudAfiliacion {
         this.fecha = fecha;
     }
 
-    public EstadoSolicitud getEstado() {
+    public EstadoSolicitud getEstadoSolicitud() {
         return estado;
     }
 
-    public void setEstado(EstadoSolicitud estado) {
+    public void setEstadoSolicitud(EstadoSolicitud estado) {
         this.estado = estado;
     }
+
 
     public String getComentario() {
         return comentario;

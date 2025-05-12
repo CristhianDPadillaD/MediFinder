@@ -4,9 +4,10 @@ USE Medifinder;
 
 CREATE TABLE Farmacia (
     idFarmacia INT PRIMARY KEY AUTO_INCREMENT,
+    nit varchar(50) NOT NULL,
     nombre VARCHAR(100) NOT NULL,
     direccion VARCHAR(150),
-    telefono VARCHAR(20)
+    email VARCHAR(20)
 );
 
 CREATE TABLE RepresentanteFarmacia (
@@ -41,16 +42,12 @@ CREATE TABLE SolicitudAfiliacion (
     comentario VARCHAR(200),
     idMunicipio INT,
     idRepresentante INT,
-    idDocumento INT,
+    idFarmacia INT,
     FOREIGN KEY (idMunicipio) REFERENCES Municipio(idMunicipio),
     FOREIGN KEY (idRepresentante) REFERENCES RepresentanteFarmacia(idRepresentante),
-    FOREIGN KEY (idDocumento) REFERENCES Documento(idDocumento)
+    foreign key (idFarmacia) references Farmacia(idFarmacia)
 );
 
-INSERT INTO Departamento (nombre) VALUES ('Nariño');
-INSERT INTO Municipio (nombre, idDepartamento)
-VALUES ('Pasto', (SELECT idDepartamento FROM Departamento WHERE nombre = 'Nariño'));
-INSERT INTO RepresentanteFarmacia (nombre, apellido, telefono, correo ) VALUES ('Luisa', 'Portilla', '3138196821','Luisa123@gmail.com');
 
 
 

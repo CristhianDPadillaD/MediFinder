@@ -4,10 +4,7 @@
  */
 package com.mycompany.medifinder.enums;
 
-/**
- *
- * @author Cris
- */
+
 public enum EstadoFarmacia {
     INACTIVA,
     ACTIVA

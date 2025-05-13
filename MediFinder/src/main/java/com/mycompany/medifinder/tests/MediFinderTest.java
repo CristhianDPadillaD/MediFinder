@@ -24,9 +24,9 @@ public class MediFinderTest extends TestCase {
     guardarSolicitud.insertarDepartamento("Nariño");
     municipio = guardarSolicitud.insertarMunicipio("Pasto", 1);
     representante = guardarSolicitud.insertarRepresentante("Luisa", "Portilla", "3138196821", "Luisa123@gmail.com");
-    DocumentoSoporte registroCamara = new DocumentoSoporte("registro_camara.pdf", "Registro Cámara de Comercio", "");
-    DocumentoSoporte licenciaFuncionamiento = new DocumentoSoporte("licencia.pdf", "Licencia de Funcionamiento", "");
-    DocumentoSoporte registroSanitario = new DocumentoSoporte("sanitario.pdf", "Registro Sanitario", "");
+    DocumentoSoporte registroCamara = new DocumentoSoporte("registro_camara.pdf", "Registro Cámara de Comercio", "D:\\Repositorio\\MediFinder\\MediFinder\\target\\MediFinder-1.0-SNAPSHOT\\documentos");
+    DocumentoSoporte licenciaFuncionamiento = new DocumentoSoporte("licencia.pdf", "Licencia de Funcionamiento", "D:\\Repositorio\\MediFinder\\MediFinder\\target\\MediFinder-1.0-SNAPSHOT\\documentos");
+    DocumentoSoporte registroSanitario = new DocumentoSoporte("sanitario.pdf", "Registro Sanitario", "D:\\Repositorio\\MediFinder\\MediFinder\\target\\MediFinder-1.0-SNAPSHOT\\documentos");
 
     List<DocumentoSoporte> documentos = new ArrayList<>();
     documentos.add(registroCamara);
